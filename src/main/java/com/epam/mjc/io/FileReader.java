@@ -20,7 +20,7 @@ public class FileReader {
             while ((b = inputStream.read()) != -1) {
                 stringBuilder.append((char) b);
             }
-            String[] vals = stringBuilder.toString().trim().split("\r?\n");
+            String[] vals = stringBuilder.toString().trim().split("\r\n");
             name = vals.length > 0 ? vals[0].substring(vals[0].indexOf(':') + 1).trim() : "";
             age = vals.length > 1 ? vals[1].substring(vals[1].indexOf(':') + 1).trim() : "";
             email = vals.length > 2 ? vals[2].substring(vals[2].indexOf(':') + 1).trim() : "";
